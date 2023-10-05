@@ -1,0 +1,599 @@
+/* -------------------------------------------------------------------------------------------------- */
+/* estilos globales */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-thumb {
+  background: lightcoral;
+  border-radius: 100vh;
+}
+/* -------------------------------------------------------------------------------------------------- */
+/* pagina publica register */
+.register__global {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url(https://images4.alphacoders.com/132/1326496.png);
+  background-position: 0 0;
+  background-size: cover;
+}
+.register__image {
+  width: 50%;
+  /* height: 500px; */
+  border-radius: 20px;
+}
+.register__title {
+  text-align: center;
+}
+.register__date {
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 20px;
+  padding: 2rem;
+}
+.register__label {
+  display: block;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+.register__input {
+  width: 250px;
+  padding: 0.3rem 0;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+.iconEmail {
+  background-image: url(https://cdn-icons-png.flaticon.com/512/95/95645.png);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position-x: 5px;
+  background-position-y: center;
+  padding-left: 30px;
+}
+.iconName {
+  background-image: url(https://static.thenounproject.com/png/1946983-200.png);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position-x: 5px;
+  background-position-y: center;
+  padding-left: 30px;
+}
+.register__position__button {
+  margin: 0.5rem 0;
+  text-align: center;
+}
+.register__button {
+  width: 100%;
+  padding: 0.2rem 0;
+  border-radius: 5px;
+  border: none;
+  background: lightblue;
+  color: white;
+  font-weight: bold;
+}
+/* -------------------------------------------------------------------------------------------------- */
+/* pagina publica login */
+.login__global {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url(https://images4.alphacoders.com/132/1326496.png);
+  background-position: 0 0;
+  background-size: cover;
+}
+.login__image {
+  border-radius: 20px;
+  width: 100%;
+  height: 500px;
+}
+.login__date {
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 20px;
+  padding: 2rem;
+}
+.login__label {
+  display: block;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+.login__input {
+  width: 250px;
+  padding: 0.3rem 0;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+.iconUser {
+  background-image: url(https://img2.freepng.es/20180518/rbi/kisspng-user-computer-icons-symbol-5aff29c27daa60.7927792015266718105147.jpg);
+  background-size: 25px;
+  background-repeat: no-repeat;
+  background-position-x: 2px;
+  background-position-y: center;
+  padding-left: 25px;
+}
+.iconPassword {
+  background-image: url(https://cdn-icons-png.flaticon.com/512/345/345535.png);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position-x: 5px;
+  background-position-y: center;
+  padding-left: 25px;
+}
+.login__position__button {
+  margin: 0.5rem 0;
+  text-align: center;
+}
+.login__button {
+  width: 100%;
+  padding: 0.2rem 0;
+  border-radius: 3px;
+  border: none;
+  background: lightblue;
+  color: white;
+  font-weight: bold;
+}
+/* -------------------------------------------------------------------------------------------------- */
+/* navbar */
+.navbar__init {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  border-bottom: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+.menu__rigth {
+  /* position: fixed;
+  right: 2%;
+  top: 2%; */
+  padding: 0.5rem;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid #fff;
+  cursor: pointer;
+  transition: 0.5s;
+  color: white;
+}
+.navbar__home {
+  text-decoration: none;
+  color: white;
+}
+.navbar__infoButton {
+  display: flex;
+  gap: 2rem;
+}
+.navbar__btnBack {
+  color: white;
+  padding: 0.3rem 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+/* -------------------------------------------------------------------------------------------------- */
+/* tracks route */
+.tracks__Page__global {
+  background-image: url(https://images4.alphacoders.com/132/1326496.png);
+  background-position: 0 0;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+/* -------------------------------------------------------------------------------------------------- */
+/* Header Music */
+.header__global {
+  overflow-y: scroll;
+  position: fixed;
+  right: -100%;
+  bottom: 3rem;
+  width: 360px;
+  top: 6rem;
+  /* background: rgba(255, 255, 255, 0.8); */
+  background: white;
+  border-radius: 10px;
+  transition: 0.5s;
+  z-index: 100;
+}
+.menucheck {
+  display: none;
+}
+.menucheck:checked ~ .header__global {
+  transition: 0.5s;
+  right: 2%;
+}
+.header__global::-webkit-scrollbar {
+  width: 5px;
+}
+.header__global::-webkit-scrollbar-thumb {
+  background: lightcoral;
+  border-radius: 100vh;
+}
+.header__content {
+  padding: 2rem;
+  margin: 2rem 0;
+  transition: 1s;
+  top: 5%;
+}
+.header__label {
+  display: block;
+  font-weight: bold;
+}
+.header__input {
+  width: 300px;
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: none;
+  background: #d2e0fb;
+}
+.header__textarea {
+  max-width: 300px;
+  min-width: 300px;
+  max-height: 100px;
+  height: 50px;
+  padding: 0.2rem;
+  outline: none;
+}
+.header__button {
+  width: 300px;
+  padding: 0.3rem 0;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background: lightskyblue;
+  font-weight: bold;
+}
+.menucheck:checked ~ .exit__menuRigth {
+  background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 10;
+}
+/* -------------------------------------------------------------------------------------------------- */
+/* Homepage cards */
+.homepage__global {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 5rem 0;
+}
+.homepage__content {
+  width: fit-content;
+  margin: 1rem auto;
+  padding: 1rem 0;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  text-align: center;
+}
+.homepage__input {
+  width: 350px;
+  border-radius: 100vh;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  background-image: url(https://cdn.pixabay.com/photo/2013/10/01/16/55/magnifying-glass-189254_1280.png);
+  background-position: center;
+  background-size: 25px;
+  background-repeat: no-repeat;
+  background-position-x: 10px;
+  padding-left: 40px;
+  box-shadow: rgba(255, 255, 255, 0.5) -8px -8px 15px,
+    rgba(0, 0, 0, 0.1) 10px 10px 10px,
+    rgba(255, 255, 255, 0.5) -8px -8px 15px inset,
+    rgba(0, 0, 0, 0.1) 10px 10px 10px inset;
+}
+.homepage__select {
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+.homepage__option {
+  margin: 0.2rem 0;
+}
+.home__page__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+.homepage__allCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+.homepage__imageList__btn {
+  display: flex;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+.homepage__imageList {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: 400px;
+}
+.homepage__positionImage {
+  text-align: center;
+}
+.homepage__image {
+  border-radius: 50%;
+  width: 120px;
+}
+.homepage__info {
+  text-align: center;
+}
+.homepage__link {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #3d0c11;
+}
+.homepage__link:hover {
+  color: blueviolet;
+}
+.homepage__list {
+  list-style: none;
+}
+.homepage__nameArtist {
+  cursor: pointer;
+}
+.homepage__nameArtist:hover {
+  color: lightsalmon;
+  text-shadow: 1px 1px 0;
+}
+.homepage__buttonIcon {
+  display: flex;
+  gap: 0.3rem;
+  font-size: 1.5rem;
+  z-index: 100;
+}
+.homepage__btn {
+  cursor: pointer;
+}
+/* -------------------------------------------------------------------------------------------------- */
+/* tracklist */
+.tracklist__card {
+  background: rgba(0, 0, 0, 0.6);
+  margin: 2rem 0;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.3rem;
+  color: #fff;
+  max-width: 300px;
+  width: 300px;
+}
+.tracklist__imageInfo {
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+.tracklist__image {
+  width: 50px;
+  border-radius: 100vh;
+}
+.tracklist__list {
+  list-style: none;
+}
+.tracklist__name {
+  font-size: 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.tracklist__item {
+  font-size: 0.7rem;
+}
+.tracklist__btnDelete {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+/* -------------------------------------------------------------------------------------------------- */
+/* --------------- */
+/* trackPage  */
+/* --------------- */
+/* trackPage - track info */
+.trackinfo__global {
+  padding-block: 6rem;
+  display: flex;
+  justify-content: center;
+}
+.trackinfo__content {
+  padding: 1rem;
+  border-radius: 10px;
+  width: fit-content;
+  background: rgba(255, 255, 255, 0.8);
+}
+.trackinfo__init {
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.trackinfo__imageInfo {
+  width: 450px;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 5px;
+}
+.trackinfo__positionImage {
+  text-align: center;
+}
+.trackinfo__image {
+  max-width: 500px;
+  width: 150px;
+  border-radius: 50%;
+}
+.trackinfo__list {
+  list-style: none;
+}
+.trackinfo__position__iframe {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+/* ------------------------------------------- */
+/* trackPage - track related */
+.related__imageInfo {
+  display: flex;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.8);
+  width: 450px;
+  margin: 0.5rem 0;
+  border-radius: 5px;
+  align-items: center;
+}
+.related__cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.related__image {
+  width: 100px;
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+.related__link {
+  text-decoration: none;
+  color: #12486b;
+}
+.related__link:hover {
+  color: lightsalmon;
+}
+.related__list {
+  list-style: none;
+}
+/* -------------------------------------------------------------------------------------------------- */
+/* artists global*/
+.artistPage__global {
+  padding-block: 6rem;
+  display: flex;
+  justify-content: center;
+}
+.artistPage__content {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 1rem;
+  width: 550px;
+  border-radius: 10px;
+}
+/* -------------------------------------------------------------------------------------------------- */
+/* artist info */
+.artistInfo__init {
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1rem;
+  background: #1b4d6664;
+  border-radius: 10px;
+  padding: 0.3rem;
+}
+.artistInfo__image {
+  width: 200px;
+  /* height: 200px; */
+  border-radius: 100vh;
+}
+.artistInfo__name {
+  margin: 1rem 0;
+}
+.artistInfo__list {
+  list-style: none;
+}
+.artistInfo__sublist {
+  list-style: none;
+  font-size: 0.9rem;
+  padding-left: 0.5rem;
+}
+.artistInfo__sublistIcon {
+  font-size: 0.7rem;
+}
+/* -------------------------------------------------------------------------------------------------- */
+/* artist album */
+.artistAlbum__init {
+  color: white;
+  margin: 1rem 0;
+  background: #1b4d6664;
+  border-radius: 10px;
+}
+.artistAlbum__title {
+  text-align: center;
+  padding-top: 1rem;
+}
+.albumCard__image {
+  width: 120px;
+  border-radius: 100vh;
+}
+.artistAlbum__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+  margin: 0 auto;
+  gap: 0.5rem;
+}
+.albumCard__card {
+  background: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border-radius: 10px;
+  color: #000;
+}
+/* -------------------------------------------------------------------------------------------------- */
+/* artist songsTop */
+.songTop__init {
+  background: #1b4d6664;
+  border-radius: 10px;
+  color: rgb(66, 29, 29);
+}
+.songTop__title {
+  text-align: center;
+  padding-top: 1rem;
+}
+/* -------------------------------------------------------------------------------------------------- */
+/* Spinner */
+.spinner {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+/* -------------------------------------------------------------------------------------------------- */
+/* routefail */
+.route__fail {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
