@@ -12,12 +12,12 @@ const useFetch = () => {
   const getApi = (path) =>{
     setLoading(true)
     const url = `${baseURL}${path}`
-    const config = {
-      headers:{
-        Authorization: `JWT ${localStorage.getItem('token')}`
-      }
-    }
-    axios.get(url, config)
+    // const config = {
+    //   headers:{
+    //     Authorization: `JWT ${localStorage.getItem('token')}`
+    //   }
+    // }
+    axios.get(url, getConfigToken())
     .then(res => {
       setInfoApi(res.data)
       setHasError(false)

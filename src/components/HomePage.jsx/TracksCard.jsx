@@ -24,7 +24,7 @@ const TracksCard = ({track}) => {
           <img className='homepage__image' src={track.album.images[0].url} alt="" />
         </header>
         <article className='homepage__info'>
-          <Link className='homepage__link' to={`/track/${track.id}`}><h3>{track.name}</h3></Link>
+          <Link className='homepage__link'  to={`/track/${track.id}`}><h3>{track.name}</h3></Link>
           <ul className='homepage__list'>
             {
               track.artists.map(artist =>(

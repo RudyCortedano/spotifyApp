@@ -16,9 +16,9 @@ function App() {
   const dispatch = useDispatch()
 
   useEffect (() => {
-    const token = localStorage.removeItem("token")
-    const username = localStorage.removeItem("username")
-    const email = localStorage.removeItem("email")
+    const token = localStorage.getItem("token")
+    const username = localStorage.getItem("username")
+    const email = localStorage.getItem("email")
     const obj = {token, username, email} 
     dispatch(setCredentialsSlice(obj))
   }, [])

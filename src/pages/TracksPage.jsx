@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 import TrackInfo from "../components/TrackPage/TrackInfo";
@@ -17,6 +17,8 @@ const TracksPage = () => {
   if(loading){
     return <Spinners/>
   }
+
+  console.log(id)
 
   return (
     <>

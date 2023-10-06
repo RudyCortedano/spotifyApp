@@ -11,10 +11,13 @@ const ArtistPage = () => {
 
   const [artist, getArtist, loading] = useFetch();
 
+  
   useEffect(() => {
     getArtist(`/api/artists/${id}`);
   }, [id]);
-
+  
+  console.log(artist)
+  
   if(loading){
     return <Spinners/>
   }
