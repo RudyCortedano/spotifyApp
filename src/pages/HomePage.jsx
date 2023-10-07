@@ -5,7 +5,8 @@ import Spinners from "../components/Shared/Spinners";
 
 const HomePage = () => {
   const [listTracks, getListTracks, loading] = useFetch();
-  const [inputValue, setInputValue] = useState("ricardo arjona");
+  // const [inputValue, setInputValue] = useState("ricardo arjona");
+  const [inputValue, setInputValue] = useState("michael jackson");
   const [quantityPerPage, setQuantityPerPage] = useState(10);
 
   useEffect(() => {
@@ -31,7 +32,13 @@ const HomePage = () => {
   }
 
   return (
-      <div className="homepage__global">
+    <>
+    
+        <label className="menu__rigth" htmlFor="checkRigth">
+            <i className="fa-solid fa-bars"></i>
+        </label>
+
+        <div className="homepage__global">
         <div className="homepage__content">
           <form  onSubmit={handleSubmit}>
             <input className="homepage__input" ref={inputSearch} type="text" placeholder="name music or name artist"/>
@@ -50,6 +57,8 @@ const HomePage = () => {
           </div>
         </div>
       </div>
+    </>
+
   );
 };
 

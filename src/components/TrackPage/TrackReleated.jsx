@@ -25,11 +25,6 @@ const TrackReleated = ({artist}) => {
             <TracksCard key={track.id}  track={track}/>
           ))
         }
-        {/* {
-          tracksList?.tracks.items.map(track =>(
-            <TrackRelatedCard key={track.id}  track={track}/>
-          ))
-        } */}
       </div>
     </section>
 

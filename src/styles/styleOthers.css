@@ -1,16 +1,76 @@
 /* ----------------------------------------------------------------------------------------------------- */
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 /* ----------------------------------------------------------------------------------------------------- */
 /* card rotatoria */
-.cardface__positionImage{
-  margin: 1rem 0;
-  text-align: center;
+/* .card360{
+  display: none;
+} */
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  overflow: hidden;
+  transition: 0.5s;
+  overflow-y: scroll;
+  padding: 0;
+  margin: 0;
 }
-.cardface__image{
-  width: 80%;
+.face::-webkit-scrollbar {
+  width: 5px;
 }
+.face::-webkit-scrollbar-thumb {
+  background: lightcoral;
+  border-radius: 100vh;
+}
+.front {
+  background: white;
+  transform: perspective(600px) rotateY(0deg);
+  float: left;
+  background-image: url(https://w0.peakpx.com/wallpaper/994/693/HD-wallpaper-music-colorful-symbol.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+align-items: center;
+  padding: 2rem 0;
+  color: white;
+}
+.back {
+  transform: perspective(600px) rotateY(180deg);
+  background-image: url(https://i.pinimg.com/originals/5d/5d/5e/5d5d5ec6ab5784b8d84d990bddab9536.jpg);
+  background-size: cover;
+  /* background: white; */
+  color: white;
+}
+.face__buttonPosition {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+}
+.button360 {
+  background: #cd5c08;
+  padding: 0.3rem 1rem;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.card360:checked ~ .front {
+  transform: perspective(600px) rotateY(180deg);
+}
+.card360:checked ~ .back {
+  transform: perspective(600px) rotateY(360deg);
+}
+
+/* .header__global:hover .front{
+  transform: perspective(1000px) rotateY(180deg);
+}
+.header__global:hover .back{
+  transform: perspective(1000px) rotateY(360deg);
+} */
 /* ----------------------------------------------------------------------------------------------------- */

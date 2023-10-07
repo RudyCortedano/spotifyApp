@@ -14,11 +14,7 @@ const Navbar = () => {
       <label className='navbar__btnBack' onClick={handleBack}>Back</label>
       <div className='navbar__infoButton'>
         <Link className='navbar__home' to='/'>Home</Link>
-        <label htmlFor="checkRigth">
-          <span className="menu__rigth">
-            <i class="fa-solid fa-bars"></i>
-          </span>
-        </label>
+
       </div>
 
     </nav>
