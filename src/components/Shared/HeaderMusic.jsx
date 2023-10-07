@@ -1,9 +1,27 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import TrackList from "./TrackList";
+import { useForm } from "react-hook-form";
+import usePlaylist from "../../hooks/usePlaylist";
 
 const HeaderMusic = () => {
   const trackPlaylist = useSelector((store) => store.tracks);
+
+  const {register, handleSubmit, reset} = useForm()
+   const {postPlaylist}= usePlaylist()
+
+  const submit = data =>{
+    const obj = {
+      ...data,
+      tracks: trackPlaylist.map(e => ({ id: e.id }))
+    }
+    postPlaylist(obj)
+    reset({
+      title:'',
+      to:'',
+      message:'',
+    })
+  }
 
   return (
     <>
@@ -30,23 +48,23 @@ const HeaderMusic = () => {
           <div className="header__content">
             <h1>Gift Music</h1>
             <div>
-              <form>
+              <form onSubmit={handleSubmit(submit)}>
                 <div className="header__inputLabel">
                   <label className="header__label" htmlFor="title">
                     Title
                   </label>
-                  <input className="header__input" type="text" id="title" />        
+                  <input required {...register('title')} className="header__input" type="text" id="title" />        
                 <div>
                   <label className="header__label" htmlFor="to">
                     To
                   </label>
-                  <input className="header__input" type="text" id="to" />
+                  <input required {...register('to')} className="header__input" type="text" id="to" />
                 </div>
                 <div>
                   <label className="header__label" htmlFor="message">
                     Message
                   </label>
-                  <textarea className="header__textarea" id="message" />
+                  <textarea required {...register('message')} className="header__textarea" id="message" />
                 </div>
                 </div>
                 {/* <div className="trackList__global">

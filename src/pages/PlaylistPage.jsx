@@ -1,16 +1,16 @@
-// import { useEffect } from "react";
-// import usePlaylist from "../hooks/usePlaylist";
+import { useEffect } from "react";
+import usePlaylist from "../hooks/usePlaylist";
 
-// const PlaylistPage = () => {
-//   const { playlist, getPlaylist } = usePlaylist();
+const PlaylistPage = () => {
+  const { playlist, getPlaylist } = usePlaylist();
 
-//   useEffect(() => {
-//     getPlaylist();
-//   }, []);
+  useEffect(() => {
+    getPlaylist();
+  }, []);
 
-//   console.log(playlist)
+  console.log(playlist)
 
-//   return <div>PlaylistPage</div>;
-// };
+  return <div>PlaylistPage</div>;
+};
 
-// export default PlaylistPage;
+export default PlaylistPage;

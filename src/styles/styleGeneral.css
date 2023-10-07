@@ -206,7 +206,6 @@ body::-webkit-scrollbar-thumb {
   min-height: 100vh;
   display: flex;
   justify-content: center;
-
 }
 /* -------------------------------------------------------------------------------------------------- */
 /* Header Music */

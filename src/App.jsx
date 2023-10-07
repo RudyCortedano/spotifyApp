@@ -11,6 +11,7 @@ import { setCredentialsSlice } from './store/slices/credentials.slice';
 import TracksPage from './pages/TracksPage';
 import ArtistPage from './pages/ArtistPage';
 import RouteFail from './pages/RouteFail';
+import PlaylistPage from './pages/PlaylistPage';
 
 function App() {
 
@@ -34,6 +35,7 @@ function App() {
         <Route path='/' element={<HomePage/>} />
         <Route path='/track/:id' element={<TracksPage />} />
         <Route path='/artist/:id' element={<ArtistPage />} />
+        <Route path='/playlist' element={<PlaylistPage />} />
       </Route>
         <Route path='*' element={<RouteFail/>} />
     </Routes>
