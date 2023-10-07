@@ -6,9 +6,9 @@
 }
 /* ----------------------------------------------------------------------------------------------------- */
 /* card rotatoria */
-/* .card360{
+.card360{
   display: none;
-} */
+}
 .face {
   position: absolute;
   width: 100%;
@@ -43,7 +43,6 @@ align-items: center;
   transform: perspective(600px) rotateY(180deg);
   background-image: url(https://i.pinimg.com/originals/5d/5d/5e/5d5d5ec6ab5784b8d84d990bddab9536.jpg);
   background-size: cover;
-  /* background: white; */
   color: white;
 }
 .face__buttonPosition {
@@ -67,10 +66,4 @@ align-items: center;
   transform: perspective(600px) rotateY(360deg);
 }
 
-/* .header__global:hover .front{
-  transform: perspective(1000px) rotateY(180deg);
-}
-.header__global:hover .back{
-  transform: perspective(1000px) rotateY(360deg);
-} */
 /* ----------------------------------------------------------------------------------------------------- */
