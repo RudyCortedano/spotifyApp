@@ -252,22 +252,18 @@ body::-webkit-scrollbar-thumb {
   padding: 0.5rem 1rem;
   outline: none;
   border: none;
-  /* background: #d2e0fb; */
   background: rgba(255, 255, 255, 0.8);
-  /* border: 1px solid #fff; */
   border-radius: 5px;
   margin: 0 auto;
 }
 .header__textarea {
   max-width: 300px;
   min-width: 300px;
-  max-height: 100px;
-  height: 50px;
+  max-height: 150px;
+  height: 100px;
   padding: 0.2rem;
   outline: none;
   background: rgba(255, 255, 255, 0.8);
-  /* background: transparent;
-  backdrop-filter: blur(5px); */
 }
 .header__button {
   width: 300px;
@@ -391,6 +387,7 @@ body::-webkit-scrollbar-thumb {
   gap: 0.3rem;
   font-size: 1.5rem;
   z-index: 100;
+  height: fit-content;
 }
 .homepage__btn {
   cursor: pointer;

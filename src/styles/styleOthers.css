@@ -6,7 +6,7 @@
 }
 /* ----------------------------------------------------------------------------------------------------- */
 /* card rotatoria */
-.card360{
+.card360 {
   display: none;
 }
 .face {
@@ -35,7 +35,7 @@
   background-size: cover;
   display: flex;
   flex-direction: column;
-align-items: center;
+  align-items: center;
   padding: 2rem 0;
   color: white;
 }
@@ -66,4 +66,35 @@ align-items: center;
   transform: perspective(600px) rotateY(360deg);
 }
 
+/* ----------------------------------------------------------------------------------------------------- */
+/* playlist */
+/* .playlist__init{
+  width: 100%;
+}
+.playlist__list{
+  margin: 5rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(5rem,1fr));
+  gap: 2rem;
+  list-style: none;
+max-width: 90%;
+}
+.playlist__item{
+  background: rgba(255,255,255,.6);
+}
+.playlist__sub{
+  list-style: none;
+} */
+.playlist__init {
+  height: fit-content;
+}
+.playlist__item {
+  background: rgba(255, 255, 255, 0.6);
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+}
 /* ----------------------------------------------------------------------------------------------------- */

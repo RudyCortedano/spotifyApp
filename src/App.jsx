@@ -12,6 +12,7 @@ import TracksPage from './pages/TracksPage';
 import ArtistPage from './pages/ArtistPage';
 import RouteFail from './pages/RouteFail';
 import PlaylistPage from './pages/PlaylistPage';
+// import './styles/styleSlider.css'
 
 function App() {
 

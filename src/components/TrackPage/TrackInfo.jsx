@@ -40,18 +40,16 @@ const TrackInfo = ({ track }) => {
       {visible ? (
         <div className="trackinfo__position__iframe">
           <iframe
-            className="trackinfo__iframe"
-            style={{ borderRadius: "12px" }}
-            src={`https://open.spotify.com/embed/track/${track?.id}?utm_source=generator&theme=0`}
+            style={{borderRadius:"12px"}}
+            src={`https://open.spotify.com/embed/track/${track?.id}?utm_source=generator`}
             width="450px"
             height="250"
             frameBorder="0"
-            allowFullsScreen=""
+            allowfullscreen=""
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
             loading="lazy"
           ></iframe>
-          </div>
-
+        </div>
       ) : (
         <span></span>
       )}
