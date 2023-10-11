@@ -71,10 +71,10 @@ const HeaderMusic = () => {
                 </div>
                 <div className="trackList__global">
                     {trackPlaylist.map((track) => (
-                      // <TrackList track={track} key={track.id} />
-                      <div  key={track.id}>
-                         {track.name}
-                      </div>
+                      <TrackList track={track} key={track.id} />
+                      // <div  key={track.id}>
+                      //    {track.name}
+                      // </div>
                      
                     ))}
                 </div>

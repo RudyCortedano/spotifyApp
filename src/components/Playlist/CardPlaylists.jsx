@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import usePlaylist from "../../hooks/usePlaylist";
 import Spinners from "../Shared/Spinners";
+import TrackList from "../Shared/TrackList";
 
 const CardPlaylists = ({playMusic, playlist,}) => {
 
@@ -21,7 +22,8 @@ const CardPlaylists = ({playMusic, playlist,}) => {
         <li>{playMusic.message}</li>
         <ul className="playlist__sub">
           {playMusic.tracks?.map((track) => (
-            <li key={track.id}>{track.name}</li>
+            // <li key={track.id}>{track.name}</li>
+            <TrackList key={track.id} track={track} />
           ))}
           {/* <li>{playMusic.tracks[0]?.name}</li> */}
         </ul>

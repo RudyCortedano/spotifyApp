@@ -6,7 +6,7 @@ import Spinners from "../components/Shared/Spinners";
 const HomePage = () => {
   const [listTracks, getListTracks, loading] = useFetch();
   // const [inputValue, setInputValue] = useState("ricardo arjona");
-  const [inputValue, setInputValue] = useState("michael jackson");
+  const [inputValue, setInputValue] = useState("jose jose");
   const [quantityPerPage, setQuantityPerPage] = useState(10);
 
   useEffect(() => {
